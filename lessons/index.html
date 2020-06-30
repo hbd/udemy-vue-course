@@ -14,17 +14,15 @@
     </head>
     <body>
         <h1>Zak's Vue Basics</h1>
-        <!--div#app tab completion-->
-        <!--vue turns this html into a javascript representation-->
-        <!--then injects its data into it-->
-        <!--then converts it back to html-->
         <div id="app">
-            <!--vue will inject data.title into the brackets-->
             <h2>{{ title }}</h2>
-            <p>{{ greet('morning') }}</p> <!--invoke vue.methods.greet-->
-            <a v-bind:href="url">YouTube</a> <!--bind Vue data to the attribute-->
-            <div :class="classes">Classes from Instance</div> <!--v-bind: or just : bind Vue data to the attribute-->
-            <input type="text" :value="name" />
+            <p>I earn {{ wage }} dollars per hour.</p> <!--invoke vue.methods.greet-->
+            <!-- <button v-on:click="wage--">Decrease wage by $1</button> -->
+            <!-- <button v-on:click="wage++">Increase wage by $1</button> -->
+            <button v-on:click="addWage(-1)">Decrease wage by $1</button>
+            <button v-on:click="addWage(1)">Increase wage by $1</button>
+            <button v-on:dblclick="addWage(-5)">Decrease wage by $5</button>
+            <button v-on:dblclick="addWage(5)">Increase wage by $5</button>
         </div>
 
         <!--uses imported vue script-->
