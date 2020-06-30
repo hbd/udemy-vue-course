@@ -2,12 +2,19 @@
 new Vue({
     el: '#app', // Just a CSS selector (on id)
     data: {
-        wage: 0
+        title: 'Becoming a Vue Samurai',
+        coords: {
+            x: 0,
+            y: 0
+        }
     },
     methods: {
-        title: 'Wage modifier',
-        addWage(amount) {
-            this.wage += amount
+        logEvent(event) {
+            console.log(event)
+        },
+        logCoords(event) {
+            this.coords.x = event.offsetX
+            this.coords.y = event.offsetY
         }
     }
 })
