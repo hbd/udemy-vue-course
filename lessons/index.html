@@ -4,22 +4,17 @@
         <!--from https://vuejs.org/v2/guide/-->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <style>
-            .canvas {
-                width: 300px;
-                height: 300px;
-                margin-top: 20px;
-                background: #dddddd;
-            }
         </style>
     </head>
     <body>
         <h1>Zak's Vue Basics</h1>
         <div id="app">
             <h2>{{ title }}</h2>
-            <button @click="logEvent">Log Event Info</button> <!--@ = v-on-->
-            <div class="canvas" @mousemove="logCoords">
-                {{ coords.x }}, {{ coords.y }}
-            </div>
+            <p>My Name is {{ name }}</p>
+            <!--sends event upon release of the key-->
+            <input type="text" @keyup="updateName">
+            <!--at time of press, we don't know the value of target; will not sync with entire value of target, always 1 letter behind-->
+            <input type="text" @keypress="updateName">
         </div>
         <script src="app.js"></script>
     </body>

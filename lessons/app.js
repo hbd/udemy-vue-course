@@ -3,18 +3,12 @@ new Vue({
     el: '#app', // Just a CSS selector (on id)
     data: {
         title: 'Becoming a Vue Samurai',
-        coords: {
-            x: 0,
-            y: 0
-        }
+        name: 'Zak'
     },
     methods: {
-        logEvent(event) {
-            console.log(event)
-        },
-        logCoords(event) {
-            this.coords.x = event.offsetX
-            this.coords.y = event.offsetY
+        updateName(e) {
+            console.log(e)
+            this.name = e.target.value
         }
     }
 })
