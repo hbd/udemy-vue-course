@@ -3,12 +3,17 @@ new Vue({
     el: '#app', // Just a CSS selector (on id)
     data: {
         title: 'Becoming a Vue Samurai',
-        name: 'Zak'
+        name: 'Zak',
+        age: 25,
+        showName: false,
+        showAge: true
     },
     methods: {
-        updateName(e) {
-            console.log(e)
-            this.name = e.target.value
+        toggleName() {
+            this.showName = !this.showName
+        },
+        toggleAge() {
+            this.showAge = !this.showAge
         }
     }
 })
