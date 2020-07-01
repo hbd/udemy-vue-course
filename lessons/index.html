@@ -1,7 +1,7 @@
 <!-- this is just a template -->
 <html>
     <head>
-        <title>Zak's Vue Basics</title>
+        <title>Vue Template</title>
         <!--from https://vuejs.org/v2/guide/-->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <style>
@@ -10,15 +10,6 @@
     <body>
         <h1>Zak's Vue Basics</h1>
         <div id="app">
-            <h2>{{ title }}</h2>
-            <ul>
-                <li v-for="item in items">{{ item }}</li>
-            </ul>
-            <div v-for="(ninja, idx) in ninjas">
-                <h4> Ninja {{idx}}: {{ ninja.name }} </h4>
-                <p>age: {{ ninja.age }}</p>
-                <p>belt color: {{ ninja.beltColor }}</p>
-            </div>
         </div>
         <script src="app.js"></script>
     </body>
