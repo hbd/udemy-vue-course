@@ -11,10 +11,7 @@
         <div id="app">
             <h2>{{ title }}</h2>
             <p>My Name is {{ name }}</p>
-            <!--sends event upon release of the key-->
-            <input type="text" @keyup="updateName">
-            <!--at time of press, we don't know the value of target; will not sync with entire value of target, always 1 letter behind-->
-            <input type="text" @keypress="updateName">
+            <input type="text" v-model="name"> <!--attach input to a data model/property-->
         </div>
         <script src="app.js"></script>
     </body>
