@@ -6,42 +6,28 @@
   <div id="app">
     <h1 id="app-title">{{ title }}</h1>
     <Navbar />
-    <AllFriends :friends="friends" @delete="deleteFriend"/>
-    <OnlineFriends :friends="friends"/>
+    <Blog />
   </div>
 </template>
 
 <script>
 import Navbar from './Navbar'
-import AllFriends from './AllFriends'
-import OnlineFriends from './OnlineFriends'
+import Blog from './Blog'
 
 // This is a component.
 export default {
   name: 'app',
   components: {
     Navbar, // w/o ES6, would need to be: Navbar: Navbar
-    AllFriends,
-    OnlineFriends
+    Blog
   },
   data () {
     return {
-      title: 'Hello, Vue!',
-      friends: [
-          { name: 'Mario', online: true },
-          { name: 'Luigi', online: false },
-          { name: 'Toad', online: true },
-          { name: 'Bowser', online: false }
-      ]
+      title: 'Hello, Vue!'
     }
   },
   methods: {
-    deleteFriend(e) {
-      // Return friends that are not the given friend.
-      this.friends = this.friends.filter(friend => {
-        return friend.name !== e.name
-      })
-    }
+
   }
 }
 </script>
